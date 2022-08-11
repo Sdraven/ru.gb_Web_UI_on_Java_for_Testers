@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-
+//
 public class Lesson5AfishaTest {
     WebDriver driver;
     WebDriverWait webDriverWait;
@@ -23,7 +23,7 @@ public class Lesson5AfishaTest {
     }
 
     @BeforeEach
-    void setupBrowser() {
+     void setupBrowser() {
         driver = new ChromeDriver();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         actions = new Actions(driver);
@@ -32,13 +32,11 @@ public class Lesson5AfishaTest {
     @Test
     void LookingShirli_Mirlitest(){
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.afisha.ru/");
         driver.findElement(By.xpath("//input[@placeholder='Событие, актер, место']")).sendKeys("ширли мырли");
-       // WebDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[.='Все развлечения Москвы']")));
+       webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[.='Все развлечения Москвы']")));
 
         driver.findElement(By.xpath("//div[.='Ширли-мырли']")).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         Assertions.assertEquals(driver.findElement(By.id("notification-landing-container")).isDisplayed(), true);
     }
 
