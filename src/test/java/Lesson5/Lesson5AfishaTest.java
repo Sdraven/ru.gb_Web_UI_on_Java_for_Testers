@@ -44,8 +44,4 @@ public class Lesson5AfishaTest {
     void quitBrowser() {
         driver.quit();
     }
-
-
-
-
 }
