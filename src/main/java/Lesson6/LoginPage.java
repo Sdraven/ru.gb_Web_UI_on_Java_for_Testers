@@ -1,10 +1,3 @@
-/**
- * Класс LoginPage
- *      класс страницы авторизации
- * @author : Хильченко А.Н
- * @project : HW_6
- * @date : 28.02.2022
- */
 
 package Lesson6;
 

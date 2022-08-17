@@ -1,10 +1,3 @@
-/**
- * Класс MainPageTest
- *      тест-кейсы главной страницы
- * @author : Хильченко А.Н
- * @project : HW_6
- * @date : 01.03.2022
- */
 
 package Lesson6;
 import java.util.*;
